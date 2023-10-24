@@ -1,0 +1,65 @@
+body {
+  padding: 50px;
+  font: 14px 'Lucida Grande', Helvetica, Arial, sans-serif;
+}
+
+a {
+  font-weight: bold;
+  color: black;
+  text-decoration: none;
+}
+
+.content {
+  display: flex;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  width: 150px;
+}
+
+.page-title {
+  margin-top: 0;
+}
+
+.post-header {
+  display: flex;
+}
+
+.post-header > * {
+  margin-right: 20px;
+  margin-bottom: 0;
+}
+
+.manage-post {
+  display: flex;
+}
+
+.manage-post-checkbox {
+  margin-right: 20px;
+}
+
+.login-form,
+.sign-up-form,
+.create-new-post-form,
+.member-form,
+.admin-form {
+  display: flex;
+}
+
+.login-fields,
+.sign-up-fields,
+.create-new-post-fields {
+  display: flex;
+  flex-direction: column;
+}
+
+.login-fields > input,
+.sign-up-fields > input,
+.create-new-post-fields > input,
+.member-fields > input,
+.admin-fields > input {
+  width: 200px;
+  margin-bottom: 20px;
+}

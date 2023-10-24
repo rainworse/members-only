@@ -1,0 +1,29 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+
+  body
+    div(class='content')
+      div(class="sidebar")
+        a(href='/') Home 
+        hr
+        if user
+          if user.member
+            a(href='/new-post') Create new post
+          else 
+            a(href='/member-form') Become a member
+          if user.admin 
+            a(href='/manage-posts') Manage posts 
+          else 
+            a(href='/admin-form') Become an admin
+          hr
+          a(href='/logout') Logout 
+        else 
+          a(href='/login') Login 
+          a(href='/sign-up') Sign up 
+
+      div(class='main-content')
+        h1(class='page-title')= title
+        block content

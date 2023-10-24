@@ -1,0 +1,14 @@
+extends layout 
+
+block content
+  div.member-form
+    form(method='POST', action='/admin-form')
+      div.admin-fields
+        label(for='password') Password:
+        input#password.form-control(type='password' required='true' name='password')
+      button.btn.btn-primary(type='submit') Submit
+
+  if errors 
+    ul 
+      for error in errors 
+        li!= error.msg

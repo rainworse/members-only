@@ -1,0 +1,15 @@
+extends layout 
+
+block content 
+  div.signup-form
+    form(method='POST' action='/sign-up')
+      div.sign-up-fields
+        label(for='username') Username:
+        input#username.form-control(type='text' placeholder='username' required='true' name='username' value=(undefined===username ? '' : username))
+        label(for='password') Password:
+        input#password.form-control(type='password' required='true' name='password')
+      button.btn.btn-primary(type='submit') Sign Up
+  if errors 
+    ul 
+      for error in errors 
+        li!= error.msg

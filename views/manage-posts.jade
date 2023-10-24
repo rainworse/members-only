@@ -1,0 +1,14 @@
+extends layout
+
+block content  
+  div(class='posts')
+    form(action="/delete-posts", method="post") 
+      each post in posts 
+        div(class='manage-post') 
+          input(type="checkbox" id=post._id name=post._id class="manage-post-checkbox")
+          div.post-content
+            div(class='post-header')
+              p(style="font-weight: bold;")= post.author.username + ": " + post.title
+              p(style="display: inline;")= post.dateCreatedFormatted 
+            p= post.text
+      button.btn.btn-primary(type='submit') Delete

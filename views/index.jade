@@ -1,0 +1,10 @@
+extends layout
+
+block content  
+  div(class='posts')
+    each post in posts 
+      div(class='post')
+        div(class='post-header')
+          p(style="font-weight: bold;")= post.author.username + ": " + post.title
+          p(style="display: inline;")= post.dateCreatedFormatted 
+        p= post.text
