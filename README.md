@@ -1,6 +1,7 @@
 # members-only
 
-Practice using Node, express and mongoose.
+Practice using Node, express and mongoose. User passport for authentication and bcryptjs for encryption
+
 A message board app where post authors are anonymized unless user is logged in and is a member. To become a member you need a special password.
 Admins can delete posts
 
